@@ -1,0 +1,18 @@
+Макет без сторонних пакетов: ничего устанавливать через `flutter pub add` не нужно.
+
+=== Добавьте в pubspec.yaml (внутри секции flutter:) ===
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/profile_bg.jpeg
+
+(отступы важны: assets — на том же уровне, что и uses-material-design)
+
+Имя пакета в pubspec.yaml (name:) должно быть l7m2, иначе импорты package:l7m2/... не найдутся.
+
+Запуск:
+flutter pub get
+flutter run
+
+Что заменить своими данными (по желанию):
+lib/config/contact_info.dart — телефон/почта/адрес поддержки (сейчас заглушки)
